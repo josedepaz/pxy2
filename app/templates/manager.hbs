@@ -1,0 +1,39 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--green-200">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <h3>Administración rutas</h3>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+                <div class="mdl-card__actions">
+                    {{#link-to "help" classNames="mdl-button"}}Instrucciones{{/link-to}}
+                </div>
+                <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 50%;">URL</th>
+                                <th class="mdl-data-table__cell--non-numeric" style="width: 50%;">Target</th>
+                                <th class="mdl-data-table__cell--non-numeric">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each model as |endpoint|}}
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric" style="widht: 50%;">{{endpoint.url}}</td>
+                                    <td class="mdl-data-table__cell--non-numeric">{{endpoint.target}}</td>
+                                    <td><button class="mdl-button mdl-js-button mdl-button--raised mdl-color--blue-200">M</button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-color--red-A100 mdl-button--accent">E</button></td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </section>    
+          </div>
+      </main>
+</div>

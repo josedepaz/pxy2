@@ -1,0 +1,1 @@
+/Users/Jose/Documents/Desarrollo/pxy2/tmp/funnel-input_base_path-u52mgZI4.tmp/0/utils/class-factory.js

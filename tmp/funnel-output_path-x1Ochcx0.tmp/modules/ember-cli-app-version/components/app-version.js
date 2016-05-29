@@ -1,0 +1,1 @@
+/Users/Jose/Documents/Desarrollo/pxy2/tmp/funnel-input_base_path-TCOpA2sL.tmp/0/components/app-version.js

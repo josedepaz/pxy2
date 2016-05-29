@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pxy2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="pxy2/config/environment" content="%7B%22modulePrefix%22%3A%22pxy2%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22hash%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22pxy2%22%2C%22version%22%3A%220.0.0+7b0f5655%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+<script>
+/* jshint browser: true */
+(function (window) {
+    if (window && window.process && window.process.type) {
+        window.ELECTRON = true;
+    }
+
+    window.requireNode = window.require;
+    window.moduleNode = window.module;
+    window.processNode = window.process;
+
+    delete window.process;
+    delete window.require;
+    delete window.module;
+})(this);
+
+</script>
+    
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/pxy2.css">
+
+    
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <script src="http://localhost:30820/socket.io/socket.io.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.EMBER_INSPECTOR_CONFIG = window.EMBER_INSPECTOR_CONFIG || {};
+    window.EMBER_INSPECTOR_CONFIG.remoteDebugSocket = io('http://localhost:30820');
+</script><script src="http://localhost:30820/ember_debug.js"></script>
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/pxy2.js"></script>
+
+    <script>
+/* jshint browser: true */
+(function (window) {
+    if (!window.ELECTRON) {
+        return;
+    }
+
+    // Restore Electron variables.
+    window.process = window.processNode;
+
+    // Redefine a global `require` function that can satisfy both
+    // Node and AMD module systems.
+    var requireAMD = window.require;
+    var requireNode = window.requireNode;
+
+    if (requireAMD) {
+        window.require = function () {
+            try {
+                return requireAMD.apply(null, arguments);
+            } catch (e) {
+                return requireNode.apply(null, arguments);
+            }
+        };
+    } else {
+        window.require = requireNode;
+    }
+})(this);
+
+</script>
+  </body>
+</html>

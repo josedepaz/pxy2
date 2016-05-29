@@ -1,0 +1,1 @@
+{"modulePrefix":"pxy2","environment":"test","baseURL":"/","locationType":"none","EmberENV":{"FEATURES":{}},"APP":{"LOG_ACTIVE_GENERATION":false,"LOG_VIEW_LOOKUPS":false,"rootElement":"#ember-testing","name":"pxy2","version":"0.0.0+7b0f5655"},"exportApplicationGlobal":true}

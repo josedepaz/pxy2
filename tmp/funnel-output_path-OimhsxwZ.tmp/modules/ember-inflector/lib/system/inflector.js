@@ -1,0 +1,1 @@
+/Users/Jose/Documents/Desarrollo/pxy2/tmp/funnel-input_base_path-ET86JQwr.tmp/0/lib/system/inflector.js

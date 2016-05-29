@@ -1,0 +1,1 @@
+/Users/Jose/Documents/Desarrollo/pxy2/tmp/config_replace-output_path-jNa5ek8h.tmp/vendor-suffix.js
